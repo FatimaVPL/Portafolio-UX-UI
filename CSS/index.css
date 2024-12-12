@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    background-color: #333;
+    color: #fff;
+    padding: 0 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.bienvenida {
+    background-color: pink;
+    padding: 20px;
+    margin-top: 10vh;
+    height: 600px;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    padding: 0 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        background: #333;
+        text-align: center;
+    }
+
+    .nav-links li {
+        padding: 15px 0;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+.nav-active {
+    display: flex;
+    flex-direction: column;
+}
+.acercaDeMi {
+    background-color: rgb(186, 137, 231);
+    padding: 20px;
+    height: 600px;
+    text-align: center;
+}
+
+footer {
+    height: 100px;
+    background-color: gray;
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    color: whitesmoke;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: whitesmoke;
+}
+#acercaDeMi {
+    text-align: center;
+}
+#textoParrafo {
+    font-size: larger;
+}
+#textoPieDePagina {
+    text-align: center;
+}
