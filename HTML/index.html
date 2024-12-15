@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
-    <script src="../JS/index.js"></script>
     <link rel="stylesheet" href="../CSS/index.css">
 </head>
 
@@ -13,10 +12,10 @@
     <div class="contenedor">
         <nav>
             <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#bienvenida" class="nav-item">Inicio</a></li>
+                <li><a href="#acercaDeMi" class="nav-item">Sobre mí</a></li>
+                <li><a href="#proyectos" class="nav-item">Proyectos</a></li>
+                <li><a href="#contacto" class="nav-item">Contacto</a></li>
             </ul>
             <div class="burger">
                 <div class="line1"></div>
@@ -25,27 +24,77 @@
             </div>
         </nav>
 
-        <div class="bienvenida">
+        <div class="bienvenida" id="bienvenida">
+           <div>
             <h1>Fatima Vianey Pérez Lara</h1>
             <p id="textoParrafo">
                 Ingeniera en Sistemas Computacionales
             </p>
+           </div>
+        </div>
+        <div class="acercaDeMi" id="acercaDeMi">
+            <div class="contenido">
+                <h2>Acerca de mí</h2>
+                <div class="seccion">
+                    <div class="miFoto">
+                        <img src="../Recursos/miFoto.webp" alt="Mi Foto">
+                    </div>
+                    <div class="informacion">
+                        <p>
+                            Me encanta el diseño, es por ello que desde siempre fue un área que me fascinó. Un poco antes de 
+                            terminar la carrera fui conociendo el mundo del diseño UX/UI, que ahora es mi pasión. 
+                            Creo en crear experiencias digitales centradas en el usuario y visualmente atractivas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="proyectos" class="proyectos">
+            <div>
+                <h2>Proyectos</h2>
+                <div class="carrusel">
+                    <button class="prev">&#10094;</button>
+                    <div class="carrusel-container">
+                        <div class="carrusel-item">
+                            <img src="../Recursos/image.png" alt="Proyecto 1">
+                            <button class="btn-action">Ver más</button>
+                        </div>
+                        <div class="carrusel-item">
+                            <img src="../Recursos/image.png" alt="Proyecto 2">
+                            <button class="btn-action">Ver más</button>
+                        </div>
+                        <div class="carrusel-item">
+                            <img src="../Recursos/image.png" alt="Proyecto 3">
+                            <button class="btn-action">Ver más</button>
+                        </div>
+                        <div class="carrusel-item">
+                            <img src="../Recursos/image.png" alt="Proyecto 4">
+                            <button class="btn-action">Ver más</button>
+                        </div>
+                    </div>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="contacto" id="contacto">
+            <div>
+                <h2>Contacto</h2>
+                <p class="contactoInf">
+                    Mi número de telefono es: 9781576819
+                    Correo electronico: micorreo@gmail.com
+                    Linkedin:
+                </p>
+            </div>
         </div>
 
-        <div class="acercaDeMi">
-            <h2>Acerca de mí</h2>
-            <p id="acercaDeMi">
-                Me encanta el diseño, es por ello que desde siempre fue un área que siempre me facinó. Un poco antes de
-                terminar la carrera fui conociendo el mundo del diseño UX/UI. Me encanta el diseño, es por ello que
-                desde siempre fue un área que siempre me facinó. Un poco antes de terminar la carrera fui conociendo el
-                mundo del diseño UX/UI. Me encanta el diseño, es por ello que desde siempre fue un área que siempre me
-                facinó. Un poco antes de terminar la carrera fui conociendo el mundo del diseño UX/UI.
-            </p>
-        </div>
     </div>
 </body>
+<script src="../JS/index.js"></script>
 <footer>
-    <p id="textoPieDePagina"> Este es el pie de página, correo perezlarafatima@gmail.com</p>
+    <p id="textoPieDePagina"> Aquí el texto de pie de página </p>
 </footer>
 
 </html>
