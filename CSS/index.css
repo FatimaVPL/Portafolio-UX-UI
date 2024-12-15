@@ -230,7 +230,6 @@ footer {
     nav {
         flex-direction: column;
         align-items: flex-start;
-        padding: 10px;
     }
 
     .nav-links {
@@ -254,8 +253,20 @@ footer {
 
     .burger {
         display: block;
-    cursor: pointer;
+        cursor: pointer;
+        margin-top: auto;
     }
+
+    .burger.toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .burger.toggle .line2 {
+        opacity: 0;
+    }
+    .burger.toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
 
     .carrusel {
         width: 100%;
@@ -297,3 +308,4 @@ footer {
         font-size: 0.9em;
     }
 }
+

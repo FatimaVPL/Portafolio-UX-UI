@@ -13,14 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
         burger.classList.toggle('toggle');
     });
 
-   /* const navLinks = document.querySelectorAll('.nav-links a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            nav.classList.remove('nav-active');
-            burger.classList.remove('toggle');
-        });
-    });*/
-
     // Clonar el primer y último elemento
     const firstClone = carruselItems[0].cloneNode(true);
     const lastClone = carruselItems[totalItems - 1].cloneNode(true);
@@ -61,4 +53,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     carruselContainer.addEventListener('transitionend', resetCarrusel);
+
 });
