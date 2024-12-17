@@ -3,6 +3,7 @@ body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth; 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -55,29 +56,40 @@ nav {
 }
 
 /* Secciones*/
-.bienvenida, .acercaDeMi, .proyectos, .contacto {
+.seccion {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 20px;
-
     height: 100vh;
-}
-
-.bienvenida {
     background-color: rgb(30, 30, 30);
     color: white;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Secciones visibles con la animación */
+.seccion.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .acercaDeMi {
-    background: rgb(30, 30, 30);
     padding: 50px 20px;
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    color: whitesmoke;
 }
 
+.contenidoAcercaDeMi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
 
 .contacto h2::after, .proyectos h2::after,.acercaDeMi h2::after {
     content: "";
@@ -87,25 +99,6 @@ nav {
     background: radial-gradient(circle, rgba(227,75,244,1) 0%, rgba(255,85,12,1) 100%);
     margin: 10px auto;
     border-radius: 10px;
-}
-
-.seccion {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.proyectos {
-    background-color: rgb(30, 30, 30);
-    color: white;
-}
-
-.contacto {
-    background-color: rgb(30, 30, 30);
-    color: white;
 }
 
 /* Carrusel */
@@ -142,12 +135,15 @@ nav {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
+    width: 80%;
+    height: 50px;
     background-color: #ff4081;
-    color: white;
+    color: whitesmoke;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
 }
 
 .btn-action:hover {
@@ -158,12 +154,16 @@ nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #333;
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
     z-index: 10;
+    width: 50px;
+    height: 50px;
+    border-radius:50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
 }
 
 .prev {
@@ -175,13 +175,13 @@ nav {
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #262626;
 }
 
 /* Footer */
 footer {
-    background-color: gray;
-    color: white;
+    background-color: rgb(19, 19, 19); ;
+    color: #333;
     text-align: center;
     padding: 10px 0;
 }
@@ -191,7 +191,7 @@ footer {
 .miFoto {
     width: 300px; 
     height: 300px; 
-    border-radius: 50%; 
+    border-radius:50%;
     overflow: hidden; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
 }
@@ -223,10 +223,89 @@ footer {
     color: pink;
 }
 
+/* Icono de contacto */
 
+.info-contacto {
+    display: flex;
+    flex-direction: column; /* Alinear elementos en columna */
+    gap: 10px; /* Espacio entre ítems */
+    margin-bottom: 15px; /* Espacio entre esta sección y los íconos */
+}
+
+.info-item {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+}
+
+.info-item i {
+    font-size: 20px;
+    color: #333;
+}
+
+.info-item span {
+    font-size: 16px;
+    color: #333;
+}
+
+.iconos-contacto {
+    display: flex;
+    gap: 15px; 
+    justify-content: center;
+}
+
+.iconos-contacto a {
+    text-decoration: none;
+    color: #333; 
+    font-size: 24px; 
+    transition: color 0.3s ease;
+}
+
+.iconos-contacto a:hover {
+    color: pink; 
+}
+/* Flechas inicio */
+
+.flecha-indicador {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.flecha-indicador i {
+    font-size: 2rem;
+    color: white;
+    animation: bounce 1.5s infinite; 
+    cursor: pointer;
+}
+
+.flecha-indicador i:hover {
+    color: pink;
+    transform: scale(1.2);
+}
+
+/* Animación de rebote */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
 
 /* Responsivo */
 @media screen and (max-width: 768px) {
+    .miFoto {
+        width: 200px; 
+        height: 200px; 
+    }
+    
     nav {
         flex-direction: column;
         align-items: flex-start;
@@ -269,7 +348,7 @@ footer {
     
 
     .carrusel {
-        width: 100%;
+        width: 50%;
     }
 
     .carrusel-item img {
@@ -285,13 +364,21 @@ footer {
         padding: 8px 15px;
     }
 
-    .seccion {
+    .contenidoAcercaDeMi {
         flex-direction: row;
     }
 }
 
 /* Pantallas pequeñas */
 @media screen and (max-width: 480px) {
+    .carrusel {
+        width: 100%;
+    }
+
+    .miFoto {
+       display: none;
+    }
+    
     nav {
         padding: 10px;
     }
@@ -308,4 +395,6 @@ footer {
         font-size: 0.9em;
     }
 }
+
+
 

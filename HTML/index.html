@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 
 <body>
@@ -24,33 +25,40 @@
             </div>
         </nav>
 
-        <div class="bienvenida" id="bienvenida">
-           <div>
-            <h1>Fatima Vianey Pérez Lara</h1>
-            <p id="textoParrafo">
-                Ingeniera en Sistemas Computacionales
-            </p>
-           </div>
+        <div class="bienvenida seccion" id="bienvenida">
+            <div>
+                <h1>Fatima Vianey Pérez Lara</h1>
+                <p id="textoParrafo">
+                    Ingeniera en Sistemas Computacionales
+                </p>
+                <div class="flecha-indicador">
+                    <a href="#acercaDeMi" class="scroll-flecha">
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                </div>
+                
+            </div>
         </div>
-        <div class="acercaDeMi" id="acercaDeMi">
+        <div class="acercaDeMi seccion" id="acercaDeMi">
             <div class="contenido">
                 <h2>Acerca de mí</h2>
-                <div class="seccion">
+                <div class="contenidoAcercaDeMi">
                     <div class="miFoto">
                         <img src="../Recursos/miFoto.webp" alt="Mi Foto">
                     </div>
                     <div class="informacion">
                         <p>
-                            Me encanta el diseño, es por ello que desde siempre fue un área que me fascinó. Un poco antes de 
-                            terminar la carrera fui conociendo el mundo del diseño UX/UI, que ahora es mi pasión. 
+                            Me encanta el diseño, es por ello que desde siempre fue un área que me fascinó. Un poco
+                            antes de
+                            terminar la carrera fui conociendo el mundo del diseño UX/UI, que ahora es mi pasión.
                             Creo en crear experiencias digitales centradas en el usuario y visualmente atractivas.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <div id="proyectos" class="proyectos">
+
+        <div class="proyectos seccion" id="proyectos" >
             <div>
                 <h2>Proyectos</h2>
                 <div class="carrusel">
@@ -77,18 +85,31 @@
                 </div>
             </div>
         </div>
-        
 
-        <div class="contacto" id="contacto">
+        <div class="contacto seccion" id="contacto"> 
             <div>
                 <h2>Contacto</h2>
-                <p class="contactoInf">
-                    Mi número de telefono es: 9781576819
-                    Correo electronico: micorreo@gmail.com
-                    Linkedin:
-                </p>
+                <div class="info-contacto">
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>9781576819</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>micorreo@gmail.com</span>
+                    </div>
+                </div>
+                <div class="iconos-contacto">
+                    <a href="https://www.linkedin.com/in/tuusuario" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/tuusuario" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
             </div>
         </div>
+                  
 
     </div>
 </body>
