@@ -7,6 +7,10 @@ body, html {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+#contenedor{
+background-color: #333;
+}
+
 /* Navbar */
 nav {
     display: flex;
@@ -41,6 +45,16 @@ nav {
     transform: scale(1.1);
 }
 
+/* Logo */
+#logo{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    right: 100px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
 /* Burger Menu */
 .burger {
     display: none;
@@ -68,6 +82,7 @@ nav {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    position: relative;
 }
 
 /* Secciones visibles con la animación */
@@ -268,7 +283,7 @@ footer {
 
 .flecha-indicador {
     position: absolute;
-    bottom: 20px;
+    bottom: 100px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
