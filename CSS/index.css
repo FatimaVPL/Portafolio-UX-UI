@@ -8,7 +8,7 @@ body, html {
 }
 
 #contenedor{
-background-color: #333;
+background-color:  rgb(30, 30, 30);
 }
 
 /* Navbar */
@@ -83,6 +83,36 @@ nav {
     transform: translateY(50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     position: relative;
+}
+
+/* Contenedor del texto */
+.contenido-texto {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Contenedor de la imagen */
+.contenido-imagen {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#textoParrafo{
+color: pink;
+}
+
+/* Imagen con opacidad */
+.imagen-derecha {
+    max-width: 80%;
+    height: auto;
+    opacity: 0.8;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.imagen-derecha:hover {
+    opacity: 1;
+    transform: scale(1.05);
 }
 
 /* Secciones visibles con la animación */
