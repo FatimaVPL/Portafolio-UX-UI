@@ -1,14 +1,15 @@
 /* General Reset */
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth; 
+    scroll-behavior: smooth;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#contenedor{
-background-color:  rgb(30, 30, 30);
+#contenedor {
+    background-color: rgb(30, 30, 30);
 }
 
 /* Navbar */
@@ -46,7 +47,7 @@ nav {
 }
 
 /* Logo */
-#logo{
+#logo {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -98,8 +99,17 @@ nav {
     align-items: center;
     justify-content: center;
 }
-#textoParrafo{
-color: pink;
+
+h1 {
+    opacity: 0.8;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+#textoParrafo {
+    color: pink;
+    font-size: 1.5rem;
+    opacity: 0.8;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 /* Imagen con opacidad */
@@ -110,12 +120,14 @@ color: pink;
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-.imagen-derecha:hover {
+.imagen-derecha:hover,
+#textoParrafo:hover,
+h1:hover {
     opacity: 1;
     transform: scale(1.05);
 }
 
-/* Secciones visibles con la animación */
+
 .seccion.visible {
     opacity: 1;
     transform: translateY(0);
@@ -129,19 +141,21 @@ color: pink;
 
 .contenidoAcercaDeMi {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 20px;
     max-width: 800px;
     margin: 0 auto;
 }
 
-.contacto h2::after, .proyectos h2::after,.acercaDeMi h2::after {
+.contacto h2::after,
+.proyectos h2::after,
+.acercaDeMi h2::after {
     content: "";
     display: block;
     width: 300px;
     height: 5px;
-    background: radial-gradient(circle, rgba(227,75,244,1) 0%, rgba(255,85,12,1) 100%);
+    background: radial-gradient(circle, rgba(227, 75, 244, 1) 0%, rgba(255, 85, 12, 1) 100%);
     margin: 10px auto;
     border-radius: 10px;
 }
@@ -180,22 +194,25 @@ color: pink;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
+    width: 50%;
     height: 50px;
     background-color: #ff4081;
     color: whitesmoke;
     border: none;
-    padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
 }
 
 .btn-action:hover {
     background-color: #bc2c8c;
 }
 
-.prev, .next {
+.prev,
+.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -207,8 +224,8 @@ color: pink;
     z-index: 10;
     width: 50px;
     height: 50px;
-    border-radius:50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .prev {
@@ -219,32 +236,35 @@ color: pink;
     right: 10px;
 }
 
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
     background-color: #262626;
 }
 
 /* Footer */
 footer {
-    background-color: rgb(19, 19, 19); ;
+    background-color: rgb(19, 19, 19);
+    height: 100px;
     color: #333;
-    text-align: center;
     padding: 10px 0;
+    justify-content: center;
+    text-align: center;
 }
 
 /* Foto de acerca de mí */
 
 .miFoto {
-    width: 300px; 
-    height: 300px; 
-    border-radius:50%;
-    overflow: hidden; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .miFoto img {
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .miFoto img:hover {
@@ -260,27 +280,35 @@ footer {
 
 .informacion {
     max-width: 500px;
+    margin: 0px;
 }
 
 .informacion p:first-letter {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: bold;
     color: pink;
+}
+
+#linkCV{
+    color: #bc2c8c;
 }
 
 /* Icono de contacto */
 
 .info-contacto {
     display: flex;
-    flex-direction: column; /* Alinear elementos en columna */
-    gap: 10px; /* Espacio entre ítems */
-    margin-bottom: 15px; /* Espacio entre esta sección y los íconos */
+    flex-direction: column;
+    /* Alinear elementos en columna */
+    gap: 10px;
+    /* Espacio entre ítems */
+    margin-bottom: 15px;
+    /* Espacio entre esta sección y los íconos */
 }
 
 .info-item {
     display: flex;
-    align-items: center; 
-    gap: 10px; 
+    align-items: center;
+    gap: 10px;
 }
 
 .info-item i {
@@ -295,20 +323,21 @@ footer {
 
 .iconos-contacto {
     display: flex;
-    gap: 15px; 
+    gap: 15px;
     justify-content: center;
 }
 
 .iconos-contacto a {
     text-decoration: none;
-    color: #333; 
-    font-size: 24px; 
+    color: #333;
+    font-size: 24px;
     transition: color 0.3s ease;
 }
 
 .iconos-contacto a:hover {
-    color: pink; 
+    color: pink;
 }
+
 /* Flechas inicio */
 
 .flecha-indicador {
@@ -322,7 +351,7 @@ footer {
 .flecha-indicador i {
     font-size: 2rem;
     color: white;
-    animation: bounce 1.5s infinite; 
+    animation: bounce 1.5s infinite;
     cursor: pointer;
 }
 
@@ -333,12 +362,19 @@ footer {
 
 /* Animación de rebote */
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         transform: translateY(0);
     }
+
     40% {
         transform: translateY(-10px);
     }
+
     60% {
         transform: translateY(-5px);
     }
@@ -347,10 +383,10 @@ footer {
 /* Responsivo */
 @media screen and (max-width: 768px) {
     .miFoto {
-        width: 200px; 
-        height: 200px; 
+        width: 200px;
+        height: 200px;
     }
-    
+
     nav {
         flex-direction: column;
         align-items: flex-start;
@@ -359,7 +395,7 @@ footer {
     .nav-links {
         display: none;
         flex-direction: column;
-        background: rgba(255, 255, 255, 0.708);
+        background:#333;
         position: absolute;
         width: 90%;
         height: auto;
@@ -372,7 +408,7 @@ footer {
 
     .nav-links.nav-active {
         display: flex;
-         align-items: center;
+        align-items: center;
     }
 
     .burger {
@@ -384,13 +420,15 @@ footer {
     .burger.toggle .line1 {
         transform: rotate(-45deg) translate(-5px, 6px);
     }
+
     .burger.toggle .line2 {
         opacity: 0;
     }
+
     .burger.toggle .line3 {
         transform: rotate(45deg) translate(-5px, -6px);
     }
-    
+
 
     .carrusel {
         width: 50%;
@@ -400,7 +438,10 @@ footer {
         border-radius: 5px;
     }
 
-    .bienvenida, .acercaDeMi, .proyectos, .contacto {
+    .bienvenida,
+    .acercaDeMi,
+    .proyectos,
+    .contacto {
         padding: 10px;
     }
 
@@ -421,9 +462,9 @@ footer {
     }
 
     .miFoto {
-       display: none;
+        display: none;
     }
-    
+
     nav {
         padding: 10px;
     }
@@ -432,7 +473,7 @@ footer {
         font-size: 0.9em;
     }
 
-    h1, h2 {
+    h2 {
         font-size: 1.5em;
     }
 
@@ -440,6 +481,3 @@ footer {
         font-size: 0.9em;
     }
 }
-
-
-
