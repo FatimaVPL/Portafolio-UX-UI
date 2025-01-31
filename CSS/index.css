@@ -28,10 +28,21 @@ nav {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+
+/* Logo */
+#logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
 .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
+    margin-right: 20%;
 }
 
 .nav-links a {
@@ -44,16 +55,6 @@ nav {
 .nav-links a:hover {
     color: pink;
     transform: scale(1.1);
-}
-
-/* Logo */
-#logo {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    right: 100px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
 }
 
 /* Burger Menu */
@@ -289,7 +290,7 @@ footer {
     color: pink;
 }
 
-#linkCV{
+#linkCV {
     color: #bc2c8c;
 }
 
@@ -382,6 +383,10 @@ footer {
 
 /* Responsivo */
 @media screen and (max-width: 768px) {
+    #logo {
+        display: none;
+    }
+
     .miFoto {
         width: 200px;
         height: 200px;
@@ -395,7 +400,7 @@ footer {
     .nav-links {
         display: none;
         flex-direction: column;
-        background:#333;
+        background: #333;
         position: absolute;
         width: 90%;
         height: auto;
