@@ -67,16 +67,6 @@ nav {
     -webkit-backdrop-filter: blur(18px) saturate(150%);
 }
 
-
-/* Logo */
-#logo {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 8px 20px rgba(126, 50, 145, 0.14);
-}
-
 .nav-brand {
     display: flex;
     align-items: center;
@@ -190,10 +180,10 @@ h1 {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    border: 1px solid rgba(188, 44, 140, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.22);
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.62);
-    color: #3c2b43;
+    background: linear-gradient(90deg,rgba(252, 188, 25, 1) 0%, rgba(250, 217, 140, 1) 100%);
+    color: #f8f8f8;
     cursor: pointer;
     font: inherit;
     font-size: 0.95rem;
@@ -206,8 +196,7 @@ h1 {
 }
 
 .habilidades button:hover {
-    border-color: rgba(188, 44, 140, 0.5);
-    color: #bc2c8c;
+    color: #cea40c;
     transform: translateY(-4px);
     box-shadow: 0 16px 36px rgba(144, 68, 162, 0.18);
 }
