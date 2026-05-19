@@ -186,6 +186,10 @@ h1 {
 }
 
 .habilidades button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     border: 1px solid rgba(188, 44, 140, 0.22);
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.62);
@@ -206,6 +210,11 @@ h1 {
     color: #bc2c8c;
     transform: translateY(-4px);
     box-shadow: 0 16px 36px rgba(144, 68, 162, 0.18);
+}
+
+.habilidades button i {
+    font-size: 0.95em;
+    line-height: 1;
 }
 
 #textoParrafo {
