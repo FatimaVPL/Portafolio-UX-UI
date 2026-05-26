@@ -5,7 +5,7 @@ html {
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Plus Jakarta Sans", Arial, sans-serif;
     color: #241927;
 }
 
@@ -19,11 +19,7 @@ body {
     min-height: 100vh;
     position: relative;
     background:
-        radial-gradient(circle at 0% 0%, rgba(255, 111, 190, 0.34), transparent 34vw),
-        radial-gradient(circle at 100% 0%, rgba(155, 82, 255, 0.28), transparent 36vw),
-        radial-gradient(circle at 0% 100%, rgba(255, 172, 217, 0.24), transparent 32vw),
-        radial-gradient(circle at 100% 100%, rgba(193, 109, 255, 0.22), transparent 34vw),
-        linear-gradient(135deg, #fffafb 0%, #fbf8ff 48%, #fffdfb 100%);
+       linear-gradient(211deg,rgba(255, 255, 255, 1) 0%, rgba(238, 174, 202, 1) 100%);
     background-attachment: fixed;
 }
 
@@ -182,7 +178,7 @@ h1 {
     gap: 8px;
     border: 1px solid rgba(255, 255, 255, 0.22);
     border-radius: 999px;
-    background: linear-gradient(90deg,rgba(252, 188, 25, 1) 0%, rgba(250, 217, 140, 1) 100%);
+    background: linear-gradient(90deg, #ff4f905e 0%, #ff9b4479 100%);
     color: #f8f8f8;
     cursor: pointer;
     font: inherit;
@@ -190,13 +186,13 @@ h1 {
     font-weight: 600;
     padding: 12px 18px;
     box-shadow: 0 10px 28px rgba(144, 68, 162, 0.09);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+     backdrop-filter: blur(18px) saturate(150%);
+    -webkit-backdrop-filter: blur(18px) saturate(150%);
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
 
 .habilidades button:hover {
-    color: #cea40c;
+      color: #f8f8f8a7;
     transform: translateY(-4px);
     box-shadow: 0 16px 36px rgba(144, 68, 162, 0.18);
 }
@@ -237,7 +233,7 @@ h1:hover {
 .acercaDeMi {
     padding: 50px 20px;
     text-align: center;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Plus Jakarta Sans", Arial, sans-serif;
 }
 
 .contenidoAcercaDeMi {
@@ -261,85 +257,126 @@ h1:hover {
     border-radius: 10px;
 }
 
-/* Carrusel */
-.carrusel {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    width: 25%;
-    margin: 20px auto;
-}
-
-.carrusel-container {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.carrusel-item {
-    min-width: 100%;
-    position: relative;
-    text-align: center;
-}
-
-.carrusel-item img {
-    width: 100%;
+/* Proyectos */
+.proyectos {
     height: auto;
+    min-height: 100vh;
+    padding: 110px 24px 72px;
+}
+
+.proyectos-contenido {
+    width: min(1100px, 100%);
+}
+
+.proyectos-intro {
+    max-width: 560px;
+    margin: 18px auto 34px;
+    color: #57485c;
+    line-height: 1.7;
+}
+
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(270px, 1fr));
+    gap: 24px;
+    text-align: left;
+}
+
+.proyecto-card {
+    position: relative;
+    height: 450px;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #35273e;
+    box-shadow: 0 18px 45px rgba(67, 34, 71, 0.16);
+    outline: none;
+}
+
+.proyecto-card img {
     display: block;
-    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.45s ease;
+}
+
+.proyecto-overlay {
+    position: absolute;
+    inset: 0;
+    padding: 25px 25px 22px;
+    color: #fff;
+    background: linear-gradient(180deg, rgba(37, 23, 43, 0.84), rgba(37, 23, 43, 0.97));
+    transform: translateY(calc(100% - 112px));
+    transition: transform 0.4s ease;
+}
+
+.proyecto-tipo {
+    margin: 0 0 9px;
+    color: #ffb28a;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.proyecto-overlay h3 {
+    margin: 0 0 19px;
+    font-size: 1.45rem;
+}
+
+.proyecto-detalle p {
+    margin: 0 0 12px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    line-height: 1.48;
+}
+
+.proyecto-detalle strong {
+    color: #ffbe9e;
+}
+
+.proyecto-card:hover .proyecto-overlay,
+.proyecto-card:focus .proyecto-overlay,
+.proyecto-card:focus-within .proyecto-overlay {
+    transform: translateY(0);
+}
+
+.proyecto-card:hover img,
+.proyecto-card:focus img,
+.proyecto-card:focus-within img {
+    transform: scale(1.05);
+}
+
+.proyecto-card:focus-visible {
+    box-shadow: 0 0 0 3px #ff7d69, 0 18px 45px rgba(67, 34, 71, 0.16);
 }
 
 .btn-action {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50%;
-    height: 50px;
-    background-color: #ff4081;
-    color: whitesmoke;
-    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 999px;
+    background: linear-gradient(90deg, #ff4f905e 0%, #ff9b4479 100%);
+    color: #f8f8f8;
     cursor: pointer;
-    border-radius: 5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    text-decoration: none;
-    text-align: center;
-    line-height: 50px;
+    font: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 12px 18px;
+    box-shadow: 0 10px 28px rgba(144, 68, 162, 0.09);
+     backdrop-filter: blur(18px) saturate(150%);
+    -webkit-backdrop-filter: blur(18px) saturate(150%);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
 
-.btn-action:hover {
-    background-color: #bc2c8c;
-}
-
-.prev,
-.next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-.prev:hover,
-.next:hover {
-    background-color: #262626;
+.btn-action:hover,
+.btn-action:focus-visible {
+       color: #f8f8f8a7;
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(144, 68, 162, 0.18);
 }
 
 /* Footer */
@@ -549,15 +586,6 @@ footer {
         transform: rotate(45deg) translate(-5px, -6px);
     }
 
-
-    .carrusel {
-        width: 50%;
-    }
-
-    .carrusel-item img {
-        border-radius: 5px;
-    }
-
     .bienvenida,
     .acercaDeMi,
     .proyectos,
@@ -565,9 +593,34 @@ footer {
         padding: 10px;
     }
 
+    .proyectos {
+        padding-top: 96px;
+        padding-bottom: 48px;
+    }
+
+    .proyectos-grid {
+        grid-template-columns: 1fr;
+        max-width: 540px;
+        margin: 0 auto;
+    }
+
+    .proyecto-card {
+        height: auto;
+    }
+
+    .proyecto-card img {
+        height: 255px;
+    }
+
+    .proyecto-overlay {
+        position: relative;
+        inset: auto;
+        transform: none;
+        padding: 22px 22px 24px;
+    }
+
     .btn-action {
-        font-size: 0.9em;
-        padding: 8px 15px;
+        font-size: 0.9rem;
     }
 
     .contenidoAcercaDeMi {
@@ -584,10 +637,6 @@ footer {
 
 /* Pantallas pequeñas */
 @media screen and (max-width: 480px) {
-    .carrusel {
-        width: 100%;
-    }
-
     .miFoto {
         display: none;
     }
@@ -611,6 +660,14 @@ footer {
     .habilidades button {
         width: 100%;
         max-width: 280px;
+    }
+
+    .proyecto-card img {
+        height: 215px;
+    }
+
+    .proyecto-overlay {
+        padding: 19px 18px 21px;
     }
 
     h2 {

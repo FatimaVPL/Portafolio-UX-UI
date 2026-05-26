@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio Fatima</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
@@ -78,31 +81,63 @@ Desde siempre me ha interesado entender y atender las necesidades de los usuario
             </div>
         </div>
 
-        <div class="proyectos seccion" id="proyectos" >
-            <div>
+        <div class="proyectos seccion" id="proyectos">
+            <div class="proyectos-contenido">
                 <h2>Proyectos</h2>
-                <div class="carrusel">
-                    <button class="prev">&#10094;</button>
-                    <div class="carrusel-container">
-                        <div class="carrusel-item">
-                            <img src="Recursos/RideSchool.png" alt="Proyecto 1">
-                            <a href="https://miro.com/app/board/uXjVPk-EsXQ=/?share_link_id=416010653468" class="btn-action" target="_blank">Ver más</a>
-                            
+                <p class="proyectos-intro">Soluciones digitales centradas en necesidades reales y experiencias claras.</p>
+                <div class="proyectos-grid">
+                    <article class="proyecto-card" tabindex="0">
+                        <img src="Recursos/RideSchool.png" alt="Pantallas de la aplicación RideSchool">
+                        <div class="proyecto-overlay">
+                            <p class="proyecto-tipo">UX/UI | Movilidad</p>
+                            <h3>RideSchool</h3>
+                            <div class="proyecto-detalle">
+                                <p><strong>Problema:</strong> Facilitar el transporte escolar con una experiencia confiable para estudiantes.</p>
+                                <p><strong>Proceso:</strong> Definición de necesidades, flujo de uso y propuesta visual de la aplicación.</p>
+                                <p><strong>Resultado:</strong> Concepto de app que organiza el traslado de forma simple y accesible.</p>
+                                <a href="https://miro.com/app/board/uXjVPk-EsXQ=/?share_link_id=416010653468" class="btn-action" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
+                            </div>
                         </div>
-                        <div class="carrusel-item">
-                            <img src="Recursos/floreria.png" alt="Proyecto 2">
-                            <a href="https://www.figma.com/design/iw2wendBuNdxenQQbFCoeQ/Florer%C3%ADa?node-id=0-1&t=lZ8xoz3cG7mOevOs-1" class="btn-action" target="_blank">Ver más</a>
+                    </article>
+                    <article class="proyecto-card" tabindex="0">
+                        <img src="Recursos/floreria.png" alt="Interfaz de tienda digital de florería">
+                        <div class="proyecto-overlay">
+                            <p class="proyecto-tipo">UI Design | E-commerce</p>
+                            <h3>Florería</h3>
+                            <div class="proyecto-detalle">
+                                <p><strong>Problema:</strong> Presentar arreglos florales de forma atractiva y facilitar la elección del cliente.</p>
+                                <p><strong>Proceso:</strong> Jerarquía de catálogo, composición visual y prototipo de compra.</p>
+                                <p><strong>Resultado:</strong> Interfaz cálida que da protagonismo al producto y orienta la navegación.</p>
+                                <a href="https://www.figma.com/design/iw2wendBuNdxenQQbFCoeQ/Florer%C3%ADa?node-id=0-1&t=lZ8xoz3cG7mOevOs-1" class="btn-action" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
+                            </div>
                         </div>
-                        <div class="carrusel-item">
-                            <img src="Recursos/ropa.png" alt="Proyecto 3">
-                            <a href="https://www.figma.com/board/MRdVUx9Qc2IsSIEqV0gtLg/TemplateFigjam?node-id=0-1&t=JtFMIqR1fhMc2FPp-1" class="btn-action" target="_blank">Ver más</a>
+                    </article>
+                    <article class="proyecto-card" tabindex="0">
+                        <img src="Recursos/ropa.png" alt="Diseño de experiencia para tienda de ropa">
+                        <div class="proyecto-overlay">
+                            <p class="proyecto-tipo">UX Research | Retail</p>
+                            <h3>Tienda de ropa</h3>
+                            <div class="proyecto-detalle">
+                                <p><strong>Problema:</strong> Ordenar la exploración de prendas para reducir fricción al comprar.</p>
+                                <p><strong>Proceso:</strong> Análisis del recorrido, organización de categorías y planeación del flujo.</p>
+                                <p><strong>Resultado:</strong> Propuesta estructurada para descubrir productos con mayor claridad.</p>
+                                <a href="https://www.figma.com/board/MRdVUx9Qc2IsSIEqV0gtLg/TemplateFigjam?node-id=0-1&t=JtFMIqR1fhMc2FPp-1" class="btn-action" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
+                            </div>
                         </div>
-                        <div class="carrusel-item">
-                            <img src="Recursos/gym.png" alt="Proyecto 4">
-                            <a href="https://www.figma.com/design/o2D1VXunVZsEZzClyZ8SBA/Asesor%C3%ADas-deportivas?node-id=0-1&t=o6tlKviV6XXl1Gfl-1" class="btn-action" target="_blank">Ver más</a>
+                    </article>
+                    <article class="proyecto-card" tabindex="0">
+                        <img src="Recursos/gym.png" alt="Pantallas de plataforma de asesorías deportivas">
+                        <div class="proyecto-overlay">
+                            <p class="proyecto-tipo">UI Design | Fitness</p>
+                            <h3>Asesorías deportivas</h3>
+                            <div class="proyecto-detalle">
+                                <p><strong>Problema:</strong> Comunicar servicios de entrenamiento de manera motivadora y entendible.</p>
+                                <p><strong>Proceso:</strong> Arquitectura de contenido, estilo visual dinámico y prototipo en Figma.</p>
+                                <p><strong>Resultado:</strong> Experiencia digital que presenta planes y acompaña la decisión del usuario.</p>
+                                <a href="https://www.figma.com/design/o2D1VXunVZsEZzClyZ8SBA/Asesor%C3%ADas-deportivas?node-id=0-1&t=o6tlKviV6XXl1Gfl-1" class="btn-action" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
+                            </div>
                         </div>
-                    </div>
-                    <button class="next">&#10095;</button>
+                    </article>
                 </div>
             </div>
         </div>
